@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.svg">
+
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- main css file -->
+  <link rel="stylesheet" href="./app/scss/style.css">
+  <title>Veloute</title>
+
+
+</head>
+<body>
+  <!-- header -->
+  <header class="header ">
+    <!-- overlay -->
+    <div class="overlay has-fade hide-for-desktop"></div>
+
+    <!-- navbar -->
+    <nav class="container container--pall flex flex-ai-c flex-jc-sb">
+      <a href="#" class="header__logo">
+        <img src="./images/logo.svg" alt="logo">
+      </a>
+
+      <!-- header links -->
+      <div class="header__links hide-for-mobile-tablet">
+        <a href="#" class="active">Home</a>
+        <a href="#" >Categories</a>
+        <a href="#" >About</a>
+      </div>
+
+      <!-- header icons -->
+      <div class="header__icons flex flex-ai-c flex-jc-sb">
+        <div>
+          <img src="./images/icon-search.svg" alt="search">
+        </div>
+        <div>
+          <img src="./images/icon-cart.svg" alt="cart">
+        </div>
+        <div class="flex flex-ai-c">
+          <img src="./images/icon-arrow-drop-down.svg" alt="arrow-drop-down">
+          <div class="header__profile"></div>
+        </div>
+      </div>
+
+      <!-- hamburger menu -->
+      <a href="#" id="hamburger__menu" class="header__toggle hide-for-desktop">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </nav>
+    <!-- end navbar -->
+
+    <!-- mobile links -->
+    <div class="header__menu has-fade hide-for-desktop">
+      <a href="#" class="active a">Home</a>
+      <a href="#" >Categories</a>
+      <a href="#" >About</a>
+    </div>
+
+    <!-- header text -->
+    <div class="header__text">
+      <div class="header__title">
+        <span>Veloute</span>
+        Perfumes Collection
+      </div>
+      <div class="header__description">
+        VELOUTE is an online platform that provides information about various types of perfumes, their ingredients, scents, prices, and reviews. These websites may sell perfumes directly to consumers or provide information about where to purchase specific fragrances.
+      </div>
+      <div class="header__button">
+        <a href="#" class="btn">Shop Now</a>
+      </div>
+    </div>
+  </header>
+
+  <script src="./app/js/script.js"></script>
+</body>
+</html>
