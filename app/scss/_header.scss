@@ -1,0 +1,263 @@
+.header {
+    position: relative;
+    background-image: url('imgs/bg-hero.svg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 60rem;
+
+    &.open {
+
+        .overlay {
+            visibility: visible;
+        }
+
+        .header__toggle {
+
+            > span:first-child {
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+            } 
+
+            > span:nth-child(2) {
+                opacity: 0;
+            }
+
+            > span:last-child {
+                transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+            }
+        }
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient($darkBlue, transparent);
+
+    }
+
+    nav {
+        background-color: transparent;
+    }
+
+    &__logo {
+        img {
+            width: 7.4688rem;
+            height: 4.0625rem;
+        }
+
+        @include breakpoint-up(medium) {
+            img {
+                width: 8rem;
+                height: 5rem;
+            }
+        }
+
+        @include breakpoint-up(large) {
+            img {
+                width: 8.4688rem;
+                height: 5.0625rem;
+            }
+        }
+    }
+
+    &__links {
+
+        a {
+            display: inline-block;
+            color: $white;
+            font-size: 1.5rem;
+            font-weight: 500;
+            
+            &:not(:last-child) {
+                margin-right: 4rem;
+            }
+        }
+    }
+
+    .active {
+        position: relative;
+        color: $primary-color;
+        font-weight: 700;
+    
+        &::after {
+            position: absolute;
+            content: "";
+            top: 2.75rem;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 0px;
+            background-color: $primary-color;
+        }
+
+        @include breakpoint-up(large) {
+            &::after {
+                height: 2px;
+            }
+        }
+    }
+
+    &__icons {
+        width: 10.375rem;
+        >div {
+
+            img {
+                width: 1.625rem;
+                height: 1.625rem;
+            }
+        }
+        
+        @include breakpoint-up(large) {
+            width: 13.375rem;
+            >div {
+
+                img {
+                    width: 1.625rem;
+                    height: 1.625rem;
+                }
+            }
+        }
+    }
+
+    &__profile {
+        background-color: $white;
+        background-image: url('imgs/image-profile.png');
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        background-size: cover;
+
+        @include breakpoint-up(medium) {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+
+        @include breakpoint-up(large) {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+
+    &__toggle {
+
+        >span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: $white;
+            transition: all 300ms ease-in-out;
+            -webkit-transition: all 300ms ease-in-out;
+            -moz-transition: all 300ms ease-in-out;
+            -ms-transition: all 300ms ease-in-out;
+            -o-transition: all 300ms ease-in-out;
+            transform-origin: 3px 1px;
+
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    &__menu {
+        position: absolute;
+        background-color: $darkBlue;
+        width: calc(100% - 6rem);
+        // margin-top: 1.5rem;
+        padding: 1.625rem;
+        left: 50%;
+        transform: translateX(-50%) ;
+        -webkit-transform: translateX(-50%) ;
+        -moz-transform: translateX(-50%) ;
+        -ms-transform: translateX(-50%) ;
+        -o-transform: translateX(-50%) ;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+
+        a {
+            display: block;
+            color: $white;
+            text-align: center;
+            padding: 1.25rem;
+        }
+    }
+
+    // header text
+    &__text {
+        text-align: center;
+        max-width: 46.25rem;
+        margin: auto;
+        margin-top: 18.75rem;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+
+        > span {
+            color: $primary-color;
+            font-family: 'Pacifico', cursive;
+        }
+
+    }
+
+    &__description {
+        text-align: start;
+        font-size: 1.25rem;
+        margin-bottom: 3rem;
+
+        @include breakpoint-down(small) {
+            font-size: .825rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        @include breakpoint-down(medium) {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+
+    &__button {
+
+        .btn {
+            font-size: 1.5rem;
+            border-radius: 64px;
+            -webkit-border-radius: 64px;
+            -moz-border-radius: 64px;
+            -ms-border-radius: 64px;
+            -o-border-radius: 64px;
+
+            &::before {
+                border-radius: 64px;
+                -webkit-border-radius: 64px;
+                -moz-border-radius: 64px;
+                -ms-border-radius: 64px;
+                -o-border-radius: 64px;
+            }
+
+            @include breakpoint-down(small) {
+                font-size: 1rem;
+                padding: 1rem 3rem;
+            }
+        }
+    }
+}
