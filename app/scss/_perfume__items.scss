@@ -1,0 +1,147 @@
+.perfume {
+    background-color: $darkBlue;
+    padding: 6.25rem;
+
+    @include breakpoint-down(medium) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 4rem;
+        
+        @include breakpoint-up(large) {
+            font-size: 4rem;
+        }
+    }
+
+    &__items {
+        display: flex;
+
+        @include breakpoint-down(small) {
+            display: block;
+        }
+
+        > div {
+            position: relative;
+            width: 24.875rem;
+            height: 27.5625rem;
+            overflow: hidden;
+            background-position: center;
+            background-size: cover;
+
+            @include breakpoint-down(medium) {
+                width: 20.875rem;
+                height: 20.5625rem;
+                margin-left: 0.2rem;
+                margin-right: 0.2rem;
+            }
+
+            p {
+                position: absolute;
+                font-size: 1.2rem;
+                font-weight: 700;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -webkit-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                -o-transform: translate(-50%, -50%);
+
+                @include breakpoint-up(large) {
+                    font-size: 1.75rem;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-right: 1.5rem;
+            }
+        }
+
+        .one {
+            background-image: linear-gradient(rgba(0,0,0,0.6)) ,url('imgs/Women-Product.jpg');
+            border-bottom-left-radius: 113px;
+            border-bottom-right-radius: 8px;
+            border-top-right-radius: 8px;
+
+            @include breakpoint-down(small) {
+                width: 22.875rem;
+                height: 27.5625rem;
+                margin: 1rem 0;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 8px;
+                -webkit-border-radius: 8px;
+                -moz-border-radius: 8px;
+                -ms-border-radius: 8px;
+                -o-border-radius: 8px;
+                -webkit-transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                -o-transform: translateX(-50%);
+            }
+        }
+
+        .two {
+            background-image: linear-gradient(rgba(0,0,0,0.6)) ,url('imgs/Unisex-Product.jpg');
+            border-radius: 8px;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            -ms-border-radius: 8px;
+            -o-border-radius: 8px;
+
+            @include breakpoint-down(small) {
+                width: 22.875rem;
+                height: 27.5625rem;
+                margin: 1rem 0;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 8px;
+                -webkit-border-radius: 8px;
+                -moz-border-radius: 8px;
+                -ms-border-radius: 8px;
+                -o-border-radius: 8px;
+                -webkit-transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                -o-transform: translateX(-50%);
+            }
+        }
+
+        .three{
+            background-image: linear-gradient(rgba(0,0,0,0.6)) ,url('imgs/Men-Product.jpg');
+            border-top-left-radius: 8px;
+            border-top-right-radius: 165px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 30px;
+
+            @include breakpoint-down(small) {
+                width: 22.875rem;
+                height: 27.5625rem;
+                margin: 1rem 0;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 8px;
+                -webkit-border-radius: 8px;
+                -moz-border-radius: 8px;
+                -ms-border-radius: 8px;
+                -o-border-radius: 8px;
+                -webkit-transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                -o-transform: translateX(-50%);
+            }
+        }
+
+        
+    }
+
+    // &__item {
+        
+    // }
+
+}
