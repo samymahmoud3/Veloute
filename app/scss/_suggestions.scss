@@ -1,0 +1,147 @@
+.suggestions {
+    background-color: $darkBlue;
+    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
+
+    .suggestion {
+
+        &__header {
+            padding: 0 0.9rem;
+        }
+
+        &__title {
+            font-size: 3rem;
+            font-weight: 500;
+
+            @include breakpoint-down(small) {
+                font-size: 2rem;
+                font-weight: 400;
+            }
+        }
+
+        &__view {
+            
+            a {
+                font-size: 2.5rem;
+                font-weight: 500;
+                color: $white;
+
+                @include breakpoint-down(small) {
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        &__products {
+            margin-top: 2rem;
+            display: flex;
+            overflow: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* Internet Explorer 10+ */
+    
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            @include breakpoint-down(medium) {
+                padding-right: 1rem;
+                padding-left: 1rem;
+            }
+        }
+
+        &__item {
+            min-width: 22.6rem;
+            height: 30.625rem;
+            padding: 0.9375rem;
+            list-style: none;
+            overflow: hidden;
+            border-radius: 20px;
+            background-color: $white;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+
+            @include breakpoint-down(medium) {
+                min-width: 18.6rem;
+                height: 24.625rem;
+            }
+
+            @include breakpoint-down(small) {
+                min-width: 16.6rem;
+                height: 22.625rem;
+            }
+
+            .image {
+                position: relative;
+                min-width: 20.6rem;
+                height: 21.6875rem;
+                overflow: hidden;
+                border-radius: 15px;
+                -webkit-border-radius: 15px;
+                -moz-border-radius: 15px;
+                -ms-border-radius: 15px;
+                -o-border-radius: 15px;
+
+                @include breakpoint-down(medium) {
+                    min-width: 16.6rem;
+                    height: 17.6975rem;
+                }
+
+                @include breakpoint-down(small) {
+                    min-width: 14.6rem;
+                    height: 15.6975rem;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .icon-heart {
+                    position: absolute;
+                    width: 3.4375rem;
+                    height: 3.4375rem;
+                    top: 0;
+                    right: 0;
+                    background-color: $blueChalk;
+                    border-bottom-left-radius: 16px;
+
+                    i {
+                        font-size: 1.875rem;
+                        color: $primary-color;
+                        margin: auto;
+                    }
+                }
+            }
+
+            .title {
+                font-size: 2rem;
+                font-weight: 600;
+                color: $darkBlue;
+                margin-top: 1.875rem;
+
+                @include breakpoint-down(medium) {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .price {
+                font-size: 1.75rem;
+                font-weight: 700;
+                color: $primary-color;
+
+                @include breakpoint-down(medium) {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+
+    }
+}

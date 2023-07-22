@@ -48,16 +48,6 @@ p {
         padding-left: 0.4rem;
     }
 
-    @include breakpoint-up(medium) {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-        padding-right: 3rem;
-        padding-left: 2.6rem;
-    }
-
-    @include breakpoint-up(large) {
-        padding: 3rem 0;
-    }
 }
 
 //Flexbox
