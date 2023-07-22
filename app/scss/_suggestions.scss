@@ -121,6 +121,18 @@
                         margin: auto;
                     }
                 }
+
+                .discount {
+                    position: absolute;
+                    width: 3.4375rem;
+                    height: 3.4375rem;
+                    top: 0;
+                    left: 0;
+                    background-color: $cadmiumRed;
+                    border-bottom-right-radius: 16px;
+                    font-size: 1.25rem;
+                    font-weight: 500;
+                } 
             }
 
             .title {
@@ -141,6 +153,11 @@
 
                 @include breakpoint-down(medium) {
                     font-size: 1.25rem;
+                }
+
+                .old_price {
+                    color: $blueChalk;
+                    text-decoration: line-through;
                 }
             }
         }
