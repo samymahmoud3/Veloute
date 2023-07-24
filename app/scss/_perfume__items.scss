@@ -42,7 +42,7 @@
 
             p {
                 position: absolute;
-                font-size: 1.2rem;
+                font-size: 0.9rem;
                 font-weight: 700;
                 top: 50%;
                 left: 50%;
@@ -54,6 +54,10 @@
 
                 @include breakpoint-up(large) {
                     font-size: 1.75rem;
+                }
+
+                @include breakpoint-up(medium) {
+                    font-size: 1.2rem;
                 }
             }
 
@@ -69,8 +73,8 @@
             border-top-right-radius: 8px;
 
             @include breakpoint-down(small) {
-                width: 22.875rem;
-                height: 27.5625rem;
+                width: 19rem;
+                height: 26rem;
                 margin: 1rem 0;
                 left: 50%;
                 transform: translateX(-50%);
@@ -95,8 +99,8 @@
             -o-border-radius: 8px;
 
             @include breakpoint-down(small) {
-                width: 22.875rem;
-                height: 27.5625rem;
+                width: 19rem;
+                height: 26rem;
                 margin: 1rem 0;
                 left: 50%;
                 transform: translateX(-50%);
@@ -120,8 +124,8 @@
             border-bottom-right-radius: 30px;
 
             @include breakpoint-down(small) {
-                width: 22.875rem;
-                height: 27.5625rem;
+                width: 19rem;
+                height: 26rem;
                 margin: 1rem 0;
                 left: 50%;
                 transform: translateX(-50%);
