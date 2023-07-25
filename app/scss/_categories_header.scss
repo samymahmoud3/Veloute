@@ -1,6 +1,11 @@
+.cat_body {
+    background-color: $darkBlue;
+}
+
 .header_categories {
     background-color: $darkBlue;
     background-image: none;
+    min-height: 22rem;
 }
 
 .categories__menu {
@@ -8,8 +13,6 @@
 }
 
 .search {
-    // margin-right: 1rem;
-    // margin-left: 1rem;
     width: 92%;
     margin: 0 auto;
     border: 2px solid $primary-color;

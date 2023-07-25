@@ -1,0 +1,153 @@
+.content {
+    background-color: $darkBlue;
+
+    .container {
+
+        .filters {
+            max-width: 17.25rem;
+            padding-right: 1.5rem;
+            margin-right: 1.5rem;
+            margin-left: 1rem;
+
+            &__title {
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 1.75rem;
+            }
+
+            .filter {
+
+                &__title {
+                    font-size: 1.875rem;
+                    font-weight: 500;
+                }
+
+                &__options {
+
+                    &:not(:last-child) {
+                        margin-bottom: 1.75rem;
+                    }
+
+                    &:last-child {
+                        padding-bottom: 1.75rem;
+                    }
+
+                    input[type=checkbox] {
+                        position: relative;
+                        width: 1.25rem;
+                        height: 1.25rem;
+                        text-align: center;
+                        cursor: pointer;
+                        border: 0; 
+                        appearance: none; 
+                        -webkit-appearance: none;
+
+                        &::before {
+                            position: absolute;
+                            content: ' ';
+                            color: $white;
+                            top: 5px;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            width: 1.25rem;
+                            height: 1.25rem;
+                            background-color: transparent;
+                            border: 1px solid $white;
+                            border-radius: 6px;
+                            -webkit-border-radius: 6px;
+                            -moz-border-radius: 6px;
+                            -ms-border-radius: 6px;
+                            -o-border-radius: 6px;
+                            mix-blend-mode: hard-light;
+                            pointer-events: none;
+                        }
+
+                        &:checked::before {
+                            content: '✓';
+                        }
+                    }
+
+                    label {
+                        color: $silver;
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                    }
+
+                    .five_stars {
+
+                        i {
+                            &:not(:last-child) {
+                            color: $gold;
+                        }
+                        }
+                    }
+
+                    .four_stars {
+
+                        i {
+
+                            &:first-child {
+                                color: $gold;
+                            }
+
+                            &:nth-child(2) {
+                                color: $gold;
+                            }
+
+                            &:nth-child(3) {
+                                color: $gold;
+                            }
+
+                            &:nth-child(4) {
+                                color: $gold;
+                            }
+                        }
+                    }
+
+                    .three_stars {
+
+                        i {
+
+                            &:first-child {
+                                color: $gold;
+                            }
+
+                            &:nth-child(2) {
+                                color: $gold;
+                            }
+
+                            &:nth-child(3) {
+                                color: $gold;
+                            }
+                        }
+                    }
+
+                    .tow_stars {
+
+                        i {
+
+                            &:first-child {
+                                color: $gold;
+                            }
+
+                            &:nth-child(2) {
+                                color: $gold;
+                            }
+                        }
+                    }
+
+                    .one_star {
+
+                        i {
+
+                            &:first-child {
+                                color: $gold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
