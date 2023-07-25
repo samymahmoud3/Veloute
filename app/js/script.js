@@ -54,3 +54,8 @@ header_menu.forEach(function(e){
 
     };
 });
+
+// focus when click on icon search
+function focusSearch() {
+    document.querySelector('input[name="search_icon"]').focus();
+}
