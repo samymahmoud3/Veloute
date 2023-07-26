@@ -2,6 +2,14 @@
     background-color: $darkBlue;
 
     .container {
+        overflow: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+    
+        &::-webkit-scrollbar {
+            display: none;
+        }
 
         .filters {
             max-width: 17.25rem;
@@ -145,6 +153,179 @@
                                 color: $gold;
                             }
                         }
+                    }
+                }
+            }
+        }
+
+        .catItems {
+            width: 57.375rem;
+
+            &__result {
+                font-size: 1.5rem;
+                font-weight: 500;
+
+                >div {
+                    margin-right: 1.5625rem;
+                }
+            }
+
+            &__remove {
+                position: relative;
+                font-size: 1.5rem;
+                font-weight: 500;
+                cursor: pointer;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    right: 0;
+                    bottom: -5px;
+                    width: 100%;
+                    height: 2px;
+                    background-color: $white;
+                }
+            }
+
+            &__products {
+                margin-top: 2rem;
+                margin-bottom: 3.5rem;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 20px;
+                
+
+                @include breakpoint-down(medium) {
+                    padding-right: 1rem;
+                    padding-left: 1rem;
+                }
+            }
+
+            &__item {
+                min-width: 16.3rem;
+                height: 20rem;
+                padding: 0.75rem;
+                list-style: none;
+                overflow: hidden;
+                border-radius: 20px;
+                background-color: $white;
+                -webkit-border-radius: 20px;
+                -moz-border-radius: 20px;
+                -ms-border-radius: 20px;
+                -o-border-radius: 20px;
+                margin-right: 0.8rem;
+
+                @include breakpoint-down(medium) {
+                    min-width: 18.6rem;
+                    height: 24.625rem;
+                }
+
+                @include breakpoint-down(small) {
+                    min-width: 16.6rem;
+                    height: 22.625rem;
+                }
+
+                .image {
+                    position: relative;
+                    min-width: 14.5rem;
+                    height: 14.4375rem;
+                    overflow: hidden;
+                    border-radius: 15px;
+                    -webkit-border-radius: 15px;
+                    -moz-border-radius: 15px;
+                    -ms-border-radius: 15px;
+                    -o-border-radius: 15px;
+
+                    @include breakpoint-down(medium) {
+                        min-width: 16.6rem;
+                        height: 17.6975rem;
+                    }
+
+                    @include breakpoint-down(small) {
+                        min-width: 14.6rem;
+                        height: 15.6975rem;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .icon-heart {
+                        position: absolute;
+                        width: 2.75rem;
+                        height: 2.75rem;
+                        top: 0;
+                        right: 0;
+                        background-color: $blueChalk;
+                        border-bottom-left-radius: 16px;
+
+                        i {
+                            font-size: 1.4375rem;
+                            color: $primary-color;
+                            margin: auto;
+                        }
+                    }
+                }
+
+                .title {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    color: $darkBlue;
+                    // margin-top: 1.875rem;
+
+                    @include breakpoint-down(medium) {
+                        font-size: 1.5rem;
+                    }
+
+                    .rating {
+
+                        i {
+                            color: $gold;
+                        }
+                    }
+                }
+
+                .price {
+                    font-size: 1.25rem;
+                    font-weight: 700;
+                    color: $primary-color;
+
+                    @include breakpoint-down(medium) {
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+
+            .btn {
+                left: 50%;
+                margin-bottom: 1rem;
+                padding: 1rem 3.5rem;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                -o-transform: translateX(-50%);
+            }
+
+            .next {
+                margin-bottom: 2rem;
+                
+                >a {
+                    color: $white;
+                    margin-right: 0.5rem;
+
+                    &:first-child {
+                        // width: 2.375rem;
+                        // height: 2.375rem;
+                        background: $primary-color;
+                        padding: 0.5rem 1rem;
+                        border-radius: 50%;
+                        -webkit-border-radius: 50%;
+                        -moz-border-radius: 50%;
+                        -ms-border-radius: 50%;
+                        -o-border-radius: 50%;
                     }
                 }
             }
