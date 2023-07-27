@@ -14,6 +14,7 @@ body {
     color: $white;
     font-weight: 400;
     min-height: 300vh;
+    background-color: $darkBlue;
 
     &.noScroll {
         overflow: hidden;
