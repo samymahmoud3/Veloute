@@ -59,3 +59,54 @@ header_menu.forEach(function(e){
 function focusSearch() {
     document.querySelector('input[name="search_icon"]').focus();
 }
+
+// --------swiper__cards-------------------//
+const swiper__indicators = Array.from(document.querySelectorAll('.swiper__indicators > span'));
+const swiper__cards = document.querySelector('.swiper__cards');
+const swiper__card = document.querySelector('.swiper__card');
+
+//button next prev 
+const swiper__prev = document.querySelector('.swiper__prev');
+const swiper__next = document.querySelector('.swiper__next');
+
+let current = 0;
+
+swiper__next.addEventListener('click', () => {
+    swiper__cards.scrollBy(380, 0);
+    swiper__prev.classList.add('active');
+    current += 1;
+
+    if (current > 2) {
+        swiper__next.classList.add('disable');
+        swiper__next.classList.remove('active')
+        current = 2;
+    } else {
+        swiper__prev.classList.remove('disable');
+        swiper__next.classList.add('active')
+        swiper__indicators.forEach((ind) => {
+            ind.classList.remove('active');
+            swiper__indicators[current].classList.add('active');
+        })
+    }
+    
+});
+
+swiper__prev.addEventListener('click', () => {
+    swiper__cards.scrollLeft -= 380;
+    swiper__next.classList.add('active');
+
+    if (current <= 0) {
+        swiper__prev.classList.add('disable');
+        swiper__prev.classList.remove('active');
+    } else {
+        current -= 1;
+        swiper__next.classList.remove('disable');
+        swiper__indicators.forEach((ind) => {
+            ind.classList.remove('active');
+            swiper__indicators[current].classList.add('active');
+        })
+    }
+
+    
+});
+
