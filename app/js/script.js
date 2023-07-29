@@ -110,3 +110,38 @@ swiper__prev.addEventListener('click', () => {
     
 });
 
+// FAQ 
+const faq__question = document.querySelectorAll('.faq__question');
+const toggles = document.querySelectorAll('.toggles');
+const faq__answer = document.querySelectorAll('.faq__answer');
+const icons = document.querySelectorAll('.icon');
+
+for (let i = 0; i < toggles.length; i++) {
+    faq__question[i].addEventListener('click', () => {
+        if (parseInt(faq__answer[i].style.height)
+            != faq__answer[i].scrollHeight) {
+            faq__answer[i].style.height =
+                faq__answer[i].scrollHeight + "px";
+            toggles[i].style.paddingBottom = "1.9rem";
+            faq__question[i].style.backgroundColor = '#8B499F';
+            icons[i].classList.remove('fa-plus');
+            icons[i].classList.add('fa-xmark');
+        } else {
+            faq__answer[i].style.height = "0px";
+            toggles[i].style.paddingBottom = "0rem";
+            faq__question[i].style.backgroundColor = '#1F2022';
+            icons[i].classList.add('fa-plus');
+            icons[i].classList.remove('fa-xmark');
+        }
+
+        for (let j = 0; j < faq__answer.length; j++) {
+            if (j !== i) {
+                faq__answer[j].style.height = "0px";
+                toggles[j].style.paddingBottom = "0rem";
+                faq__question[j].style.backgroundColor = '#1F2022';
+                icons[j].classList.add('fa-plus');
+                icons[j].classList.remove('fa-xmark');
+            }
+        }
+    });
+}
