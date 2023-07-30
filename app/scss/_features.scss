@@ -1,3 +1,24 @@
+.about_login {
+    width: 5.6rem;
+    height: 2.7rem;
+    background-color: $primary-color;
+    border-radius: 26px;
+    -webkit-border-radius: 26px;
+    -moz-border-radius: 26px;
+    -ms-border-radius: 26px;
+    -o-border-radius: 26px;
+
+    @include breakpoint-down(medium) {
+        width: 5rem;
+        height: 2.4rem;
+    }
+
+    @include breakpoint-down(small) {
+        width: 4.6rem;
+        height: 2rem;
+    }
+}
+
 .features {
     padding: 0 0.5rem;
 
