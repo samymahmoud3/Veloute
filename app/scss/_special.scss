@@ -45,6 +45,41 @@
             margin-right: 1.5rem;
         }
 
+        @include breakpoint-down(small) {
+            min-width: 14.875rem;
+            height: 19.25rem;
+        }
+
+        &:nth-child(2) {
+            min-width: 18.25rem;
+            height: 25rem;
+
+            @include breakpoint-down(small) {
+                min-width: 15.875rem;
+                height: 22.25rem;
+            }
+        }
+
+        &:nth-child(3) {
+            min-width: 24.875rem;
+            height: 31.25rem;
+
+            @include breakpoint-down(small) {
+                min-width: 17.875rem;
+                height: 24.25rem;
+            }
+        }
+
+        &:nth-child(4) {
+            min-width: 18.25rem;
+            height: 25rem;
+
+            @include breakpoint-down(small) {
+                min-width: 15.875rem;
+                height: 22.25rem;
+            }
+        }
+
         img {
             overflow: hidden;
             width: 100%;
