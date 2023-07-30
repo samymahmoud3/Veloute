@@ -1,0 +1,56 @@
+.ourCons {
+    padding: 6rem 0;
+
+    .container {
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin-bottom: 2.5rem;
+    }
+
+    &__properties {
+        @include breakpoint-up(medium) {
+            display: flex;
+        }
+    }
+
+    &__property {
+
+        .icon {
+            margin: auto;
+            margin-bottom: 1rem;
+            width: 6.4375rem;
+            height: 6.4375rem;
+            background-color: $primary-color;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+        }
+
+        .title {
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+
+        .description {
+            font-size: 1.125rem;
+            font-weight: 400;
+            padding: 0.5rem 1rem;
+            word-spacing: 1px;
+            line-height: 29px;
+            margin-bottom: 2.5rem;
+            color: #9E9E9E;
+
+            @include breakpoint-down(small) {
+                width: 280px;
+                margin: auto;
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}
