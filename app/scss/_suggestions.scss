@@ -6,7 +6,7 @@
     .suggestion {
 
         &__header {
-            padding: 0 0.9rem;
+            padding: 0 0.9rem 0 2rem;
             align-items: center;
         }
 
@@ -54,7 +54,7 @@
         }
 
         &__item {
-            min-width: 22.6rem;
+            min-width: 21rem;
             height: 30.625rem;
             padding: 0.9375rem;
             list-style: none;
